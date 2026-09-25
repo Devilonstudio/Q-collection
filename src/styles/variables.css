@@ -1,0 +1,31 @@
+:root {
+  /* Core palette — dark forest green, black, gold */
+  --black: #050505;
+  --green-950: #04110d;
+  --green-900: #071a14;
+  --green-850: #0a2118;
+  --green-800: #0e2b20;
+  --green-700: #14392b;
+
+  --gold: #c9a227;
+  --gold-soft: #e0c56e;
+  --gold-dim: rgba(201, 162, 39, 0.32);
+  --gold-faint: rgba(201, 162, 39, 0.14);
+
+  --ivory: #f5f1e8;
+  --ivory-dim: rgba(245, 241, 232, 0.66);
+  --ivory-faint: rgba(245, 241, 232, 0.4);
+  --ivory-ghost: rgba(245, 241, 232, 0.16);
+
+  --line: rgba(201, 162, 39, 0.24);
+  --line-soft: rgba(245, 241, 232, 0.09);
+
+  /* Type */
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-body: "Jost", "Helvetica Neue", Arial, sans-serif;
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  color-scheme: dark;
+}

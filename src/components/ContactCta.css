@@ -1,0 +1,48 @@
+.cta {
+  position: relative;
+  overflow: hidden;
+  padding: 130px 0;
+  background: var(--green-900);
+  text-align: center;
+}
+
+.cta__ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.16;
+}
+
+.cta__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.cta h2 {
+  font-size: clamp(2rem, 3.6vw, 2.8rem);
+  font-weight: 500;
+}
+
+.cta p {
+  margin-top: 20px;
+  color: var(--ivory-dim);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.cta__actions {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .cta {
+    padding: 90px 0;
+  }
+}

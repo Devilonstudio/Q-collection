@@ -1,0 +1,26 @@
+import { createContext, useEffect, useState } from "react";
+import { supabase, isSupabaseConfigured } from "./supabase";
+
+export const AuthContext = createContext({ session: null, loading: true });
+
+export function AuthProvider({ children }) {
+  const [session, setSession] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (!isSupabaseConfigured) {
+      setLoading(false);
+      return;
+    }
+    supabase.auth.getSession().then(({ data }) => {
+      setSession(data.session);
+      setLoading(false);
+    });
+    const { data: listener } = supabase.auth.onAuthStateChange((_event, newSession) => {
+      setSession(newSession);
+    });
+    return () => listener.subscription.unsubscribe();
+  }, []);
+
+  return <AuthContext.Provider value={{ session, loading }}>{children}</AuthContext.Provider>;
+}

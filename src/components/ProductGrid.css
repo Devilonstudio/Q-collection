@@ -1,0 +1,30 @@
+.prod-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 28px;
+}
+
+.prod-grid__empty {
+  padding: 60px 0;
+  color: var(--ivory-dim);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 1080px) {
+  .prod-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 780px) {
+  .prod-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .prod-grid {
+    grid-template-columns: 1fr;
+  }
+}

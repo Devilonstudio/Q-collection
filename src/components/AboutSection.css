@@ -1,0 +1,46 @@
+.about__grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.about__media-frame {
+  aspect-ratio: 4 / 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(201, 162, 39, 0.12), transparent 55%),
+    var(--green-900);
+  border: 1px solid var(--line);
+}
+
+.about__copy h2 {
+  margin-top: 16px;
+  font-size: clamp(1.9rem, 3.2vw, 2.5rem);
+  font-weight: 500;
+  max-width: 16ch;
+}
+
+.about__copy p {
+  margin-top: 20px;
+  color: var(--ivory-dim);
+  font-size: 1rem;
+  line-height: 1.75;
+  max-width: 56ch;
+}
+
+.about__copy .btn {
+  margin-top: 30px;
+}
+
+@media (max-width: 900px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .about__media-frame {
+    max-width: 320px;
+  }
+}

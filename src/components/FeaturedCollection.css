@@ -1,0 +1,128 @@
+.featured {
+  background: var(--green-900);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.featured__layout {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 48px;
+}
+
+.featured__lead {
+  display: block;
+}
+
+.featured__lead-media {
+ 
+  overflow: hidden;
+  border: 1px solid var(--line-soft);
+}
+
+.featured__lead-media img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.7s var(--ease);
+}
+
+.featured__lead:hover .featured__lead-media img {
+  transform: scale(1.04);
+}
+
+.featured__lead-body {
+  padding-top: 24px;
+}
+
+.featured__lead-body > span {
+  font-size: 0.76rem;
+  letter-spacing: 0.04em;
+  color: var(--ivory-faint);
+}
+
+.featured__lead-body h3 {
+  margin-top: 8px;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.featured__lead-body p {
+  margin-top: 12px;
+  color: var(--ivory-dim);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 46ch;
+}
+
+.featured__price {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.86rem;
+  color: var(--gold-soft);
+}
+
+.featured__side {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.featured__row {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.featured__side .featured__row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.featured__row-media {
+  width: 92px;
+  height: 110px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 1px solid var(--line-soft);
+}
+
+.featured__row-media img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease);
+}
+
+.featured__row:hover .featured__row-media img {
+  transform: scale(1.06);
+}
+
+.featured__row-body > span {
+  font-size: 0.72rem;
+  color: var(--ivory-faint);
+}
+
+.featured__row-body h4 {
+  margin-top: 5px;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.featured__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--green-850);
+}
+
+@media (max-width: 900px) {
+  .featured__layout {
+    grid-template-columns: 1fr;
+  }
+}
