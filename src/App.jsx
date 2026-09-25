@@ -32,7 +32,7 @@ export default function App() {
         The Suspense fallback acts as a global placeholder while the chunk loads. 
         You can replace this inline div with a custom loading spinner component.
       */}
-      <Suspense fallback={<div className="loading-fallback">Loading page...</div>}>
+      <Suspense fallback={<div className="loading-fallback"></div>}>
         <Routes>
           {/* Public Website Flow */}
           <Route element={<PublicLayout />}>

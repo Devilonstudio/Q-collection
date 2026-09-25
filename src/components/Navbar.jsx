@@ -36,6 +36,11 @@ export default function Navbar() {
     navigate(q ? `/shop?q=${encodeURIComponent(q)}` : "/shop");
   };
 
+  const handleToggle = (e) => {
+    e.stopPropagation();
+    setOpen((prev) => !prev);
+  };
+
   return (
     <header className={`nav ${scrolled ? "nav--solid" : ""}`}>
       <div className="container nav__row">
@@ -54,6 +59,7 @@ export default function Navbar() {
 
         <div className="nav__actions">
           <button
+            type="button"
             className="nav__icon-btn"
             aria-label="Search"
             onClick={() => setSearchOpen((v) => !v)}
@@ -62,10 +68,11 @@ export default function Navbar() {
           </button>
 
           <button
-            className="nav__toggle"
+            type="button"
+            className={`nav__toggle ${open ? "nav__toggle--open" : ""}`}
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
-            onClick={() => setOpen((v) => !v)}
+            onClick={handleToggle}
           >
             <span />
             <span />
