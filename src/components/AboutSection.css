@@ -5,15 +5,9 @@
   align-items: center;
 }
 
-.about__media-frame {
-  aspect-ratio: 4 / 5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background:
-    radial-gradient(ellipse at 30% 20%, rgba(201, 162, 39, 0.12), transparent 55%),
-    var(--green-900);
-  border: 1px solid var(--line);
+.about__media-frame img {
+  width: 800px;
+  height: 500px;
 }
 
 .about__copy h2 {
@@ -40,6 +34,7 @@
     grid-template-columns: 1fr;
     gap: 36px;
   }
+
   .about__media-frame {
     max-width: 320px;
   }
