@@ -139,10 +139,44 @@
 }
 
 @media (max-width: 640px) {
-  .hero__ring {
-    display: none;
+  .hero {
+    /* 1. Remove the rigid desktop screen height constraint */
+    min-height: auto; 
+    /* 2. Set an aspect-ratio-friendly container box or add generous padding */
+    padding: 100px 24px 60px 24px; 
+    box-sizing: border-box;
   }
-  .hero__scroll {
-    display: none;
+
+  .hero__bg-image {
+    /* 3. Switch cover to contain so the photo bounds fit inside the device layout */
+    object-fit: contain;
+    /* 4. Anchor the image to the top or center of the phone display background */
+    object-position: top center;
+    /* 5. Fill out the full width of the mobile display bounds */
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero__bg-overlay {
+    /* 6. Modify the overlay gradient to be vertical on mobile */
+    background: linear-gradient(
+      to bottom,
+      rgba(4, 17, 13, 0.5) 0%,   /* Let the top image display slightly brighter */
+      rgba(4, 17, 13, 0.85) 50%, /* Fade darker so text remains readable underneath */
+      var(--green-950) 100%
+    );
+  }
+
+  .hero__content {
+    /* 7. Center content elements since the layout is narrow now */
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 180px; /* Pushes text below the main upper focus point of the photo */
+  }
+
+  .hero__sub {
+    /* 8. Center paragraphs */
+    margin-left: auto;
+    margin-right: auto;
   }
 }
