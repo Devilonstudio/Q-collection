@@ -24,7 +24,6 @@ export default function Hero() {
         <div className="hero__bg-overlay" />
       </div>
 
-      <RingMark size={620} className="hero__ring" />
 
       <div className="container hero__content">
         <span className="eyebrow fade-up">The Q Collection</span>
@@ -42,9 +41,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <a href="#categories" className="hero__scroll" aria-label="Scroll to categories">
-        <span />
-      </a>
+      
     </section>
   );
 }
