@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { getCategories, getSettings } from "../lib/api";
 import logo from "../assets/logo.png";
 import "./Footer.css";
+import light from "../assets/light.png";
 
 export default function Footer() {
   const [categories, setCategories] = useState([]);
@@ -73,17 +74,18 @@ export default function Footer() {
      <div className="container footer__bottom">
   <span>&copy; 2026 The Q Collection. All Rights Reserved.</span>
   <span>All pieces made to order.</span>
-  <span>
-    Designed &amp; Developed by{" "}
-    <a
-      href="https://devilonstudio.com/"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Devilon Studio — Website Design and Development"
-    >
-      Devilon Studio
-    </a>
-  </span>
+  <span className="footer__credit">
+  Designed &amp; Developed by{" "}
+  <a
+    href="https://devilonstudio.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Designed and developed by Devilon Studio"
+  >
+    <img src={light} alt="" />
+    <span>Devilon Studio</span>
+  </a>
+</span>
 </div>
     </footer>
   );
