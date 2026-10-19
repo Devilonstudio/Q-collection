@@ -70,10 +70,21 @@ export default function Footer() {
         )}
       </div>
 
-      <div className="container footer__bottom">
-        <span>&copy; 2026 The Q Collection. All Rights Reserved.</span>
-        <span>All pieces made to order.</span>
-      </div>
+     <div className="container footer__bottom">
+  <span>&copy; 2026 The Q Collection. All Rights Reserved.</span>
+  <span>All pieces made to order.</span>
+  <span>
+    Designed &amp; Developed by{" "}
+    <a
+      href="https://devilonstudio.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Devilon Studio — Website Design and Development"
+    >
+      Devilon Studio
+    </a>
+  </span>
+</div>
     </footer>
   );
 }
